@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>JobSearchAssistant.Server-C4297F4D-CEBC-450F-BC2E-FB76FA7B0F40</UserSecretsId>
+    <UserSecretsId>JobSearchAssistant.Server-813357B2-7FAE-4A02-BC15-97A4F83C0313</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,10 +21,6 @@
     <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

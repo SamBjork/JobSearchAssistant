@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("JobSearchAssistant.Server-C4297F4D-CEBC-450F-BC2E-FB76FA7B0F40")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("JobSearchAssistant.Server-813357B2-7FAE-4A02-BC15-97A4F83C0313")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("JobSearchAssistant.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

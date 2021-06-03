@@ -5,7 +5,7 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     },
     {
-      "hash": "sha256-Muvir3Q8tlMKHNmSOBJhhltkIXzVt75JmV5WGyykPuY=",
+      "hash": "sha256-fDulgUbwAVnxd998YPHn+lct6WK8Tb0k8p5ACJZNdW0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -801,19 +801,19 @@
       "url": "_framework\/dotnet.5.0.6.js"
     },
     {
-      "hash": "sha256-Jk4xeIjv4r\/8feoAoqp6klJpPY\/myVEWzbVIb0OYu2w=",
+      "hash": "sha256-7dfdon2zwYkf7lhR+smj6sVh2E5zedNfrO4KmRZpTlc=",
       "url": "_framework\/JobSearchAssistant.Shared.dll"
     },
     {
-      "hash": "sha256-aa7mT0NFpw\/Zg0FEhhce+Af\/y6OAwf+EeTpRIT7mTXg=",
+      "hash": "sha256-EDDvpN0VMHPsbDbL1hVbtsYFHi8ZjrnOmhIyigKGvxo=",
       "url": "_framework\/JobSearchAssistant.Shared.pdb"
     },
     {
-      "hash": "sha256-O3VPa2lv8Ii4fl01a8Ef1qv74Fc+que0de5H67Zmjw8=",
+      "hash": "sha256-CYWjRLCxhyVvDntgVBmkxibvw4YGoXhqmuxZpaK5yKo=",
       "url": "_framework\/JobSearchAssistant.Client.dll"
     },
     {
-      "hash": "sha256-ODjriY1kUhp4yMDvnaldeWUOEQ4QmheB\/k48GCIjFjc=",
+      "hash": "sha256-E7avDZsgVNMfxi1lRatMqrIRN7eI3cPrHNxmPT1cmJs=",
       "url": "_framework\/JobSearchAssistant.Client.pdb"
     },
     {
@@ -1613,7 +1613,7 @@
       "url": "_framework\/dotnet.5.0.6.js.gz"
     },
     {
-      "hash": "sha256-M7csLVpkqeewq1\/\/hKxXFh9WtUNXd5pqGV83jl38spU=",
+      "hash": "sha256-PVOnbg7co+3tWK1Xicek283eiT7kK55Qo60Y0zIthbY=",
       "url": "_framework\/JobSearchAssistant.Shared.dll.gz"
     },
     {
@@ -1689,5 +1689,5 @@
       "url": "JobSearchAssistant.Client.bundle.scp.css"
     }
   ],
-  "version": "xKsYQaXr"
+  "version": "SSVDp4mr"
 };

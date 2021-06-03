@@ -198,13 +198,13 @@
       "mscorlib.dll": "sha256-jU85t8bOVm2PPQRkPJ1kS0nCJIyBjjlet2IR1d9m+RI=",
       "netstandard.dll": "sha256-B6gmXEMfYgOuaOR1g1cGHLn2kDlZYAah4K2XNUZbTs4=",
       "System.Private.CoreLib.dll": "sha256-XY0bl1U8F\/iSbQzkmIHM8UtE\/R9VntZoy\/kMbvuMjTA=",
-      "JobSearchAssistant.Shared.dll": "sha256-Jk4xeIjv4r\/8feoAoqp6klJpPY\/myVEWzbVIb0OYu2w=",
-      "JobSearchAssistant.Client.dll": "sha256-O3VPa2lv8Ii4fl01a8Ef1qv74Fc+que0de5H67Zmjw8="
+      "JobSearchAssistant.Shared.dll": "sha256-7dfdon2zwYkf7lhR+smj6sVh2E5zedNfrO4KmRZpTlc=",
+      "JobSearchAssistant.Client.dll": "sha256-CYWjRLCxhyVvDntgVBmkxibvw4YGoXhqmuxZpaK5yKo="
     },
     "lazyAssembly": null,
     "pdb": {
-      "JobSearchAssistant.Shared.pdb": "sha256-aa7mT0NFpw\/Zg0FEhhce+Af\/y6OAwf+EeTpRIT7mTXg=",
-      "JobSearchAssistant.Client.pdb": "sha256-ODjriY1kUhp4yMDvnaldeWUOEQ4QmheB\/k48GCIjFjc="
+      "JobSearchAssistant.Shared.pdb": "sha256-EDDvpN0VMHPsbDbL1hVbtsYFHi8ZjrnOmhIyigKGvxo=",
+      "JobSearchAssistant.Client.pdb": "sha256-E7avDZsgVNMfxi1lRatMqrIRN7eI3cPrHNxmPT1cmJs="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-OEDZp6noMH3AdT8qd0zd7ZXzy2CsPQ+CZeQnYmRoVWo=",
