@@ -1,9 +1,11 @@
 using JobSearchAssistant.Server.Data;
 using JobSearchAssistant.Server.Models;
+using JobSearchAssistant.Server.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -43,6 +45,9 @@ namespace JobSearchAssistant.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddTransient<IEmailSender, MailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
