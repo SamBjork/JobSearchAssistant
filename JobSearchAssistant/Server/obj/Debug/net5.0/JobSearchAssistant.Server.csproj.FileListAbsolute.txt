@@ -1,5 +1,4 @@
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\JobSearchAssistant.Client.StaticWebAssets.xml
-C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\appsettings.json
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
@@ -233,3 +232,4 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\appsettings.Development.json
