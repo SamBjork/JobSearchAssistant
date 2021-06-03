@@ -112,3 +112,6 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Debug\net5.0\ref\JobSearchAssistant.Server.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Debug\net5.0\JobSearchAssistant.Server.pdb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\obj\Debug\net5.0\JobSearchAssistant.Server.genruntimeconfig.cache
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\MailKit.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\MimeKit.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\bin\Debug\net5.0\BouncyCastle.Crypto.dll
