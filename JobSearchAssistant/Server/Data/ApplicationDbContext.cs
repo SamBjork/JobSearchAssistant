@@ -17,5 +17,8 @@ namespace JobSearchAssistant.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        DbSet<Job> Jobs { get; set; }
+        DbSet<Event> Events { get; set; }
+
     }
 }

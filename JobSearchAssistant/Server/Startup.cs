@@ -47,6 +47,7 @@ namespace JobSearchAssistant.Server
             services.AddRazorPages();
 
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+
             services.AddTransient<IEmailSender, MailService>();
         }
 

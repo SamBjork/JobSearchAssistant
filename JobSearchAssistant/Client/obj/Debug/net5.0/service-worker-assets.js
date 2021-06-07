@@ -5,7 +5,7 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     },
     {
-      "hash": "sha256-49eyxIGvBtlVGKfnyuFWA7I4t8CzvXOFrGzd4DRjnFE=",
+      "hash": "sha256-e54qUPvNqcyc+RhNkmRlhgh\/SodLaNlrT\/M5IlTWX\/8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1117,11 +1117,11 @@
       "url": "_framework\/JobSearchAssistant.Shared.pdb"
     },
     {
-      "hash": "sha256-C9xQvzU6JZtpZ1QqfTf6+xh9WEihxhEz+ZfprTd2dvI=",
+      "hash": "sha256-AMcDedtzPeZDkKHk\/tdYicHWmul+ord6MmSwmDr4OWA=",
       "url": "_framework\/JobSearchAssistant.Client.dll"
     },
     {
-      "hash": "sha256-DyS\/VWfB9rMyb\/fGcffGMRUe4BXl3UBW3QBuVZGq4FY=",
+      "hash": "sha256-wBdBh3yQNkWqZnurBDoc1BGaSmLSUerVnt3Vvt2xqPA=",
       "url": "_framework\/JobSearchAssistant.Client.pdb"
     },
     {
@@ -2305,5 +2305,5 @@
       "url": "JobSearchAssistant.Client.bundle.scp.css"
     }
   ],
-  "version": "1oViHRtd"
+  "version": "iTr3Pqh3"
 };

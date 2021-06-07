@@ -16,9 +16,9 @@ namespace JobSearchAssistant.Server.Services
     public class MailService : IEmailSender
     {
         private readonly MailSettings _mailSettings;
-        public MailService(IOptions<MailSettings> mailsSettings)
+        public MailService(IOptions<MailSettings> mailSettings)
         {
-            _mailSettings = mailsSettings.Value;
+            _mailSettings = mailSettings.Value;
         }
 
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
