@@ -16,7 +16,10 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.dll.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Html.Abstractions.dll.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Razor.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Razor.Language.dll.gz
@@ -27,6 +30,7 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CodeAnalysis.CSharp.Workspaces.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CodeAnalysis.Razor.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CodeAnalysis.Workspaces.dll.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Binder.dll.gz
@@ -38,6 +42,8 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Physical.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Http.dll.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Identity.Core.dll.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Identity.Stores.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Logging.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.dll.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Options.dll.gz
@@ -292,7 +298,10 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Razor.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Razor.Language.dll
@@ -303,6 +312,7 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Binder.dll
@@ -314,6 +324,8 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Http.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Identity.Core.dll
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Logging.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Options.dll
@@ -573,6 +585,7 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Jobs.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\RazorDeclaration\Shared\LoginDisplay.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\RazorDeclaration\Shared\RedirectToLogin.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
@@ -589,6 +602,7 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\Razor\Pages\Jobs.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\Razor\Shared\LoginDisplay.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\Razor\Shared\RedirectToLogin.razor.g.cs
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
@@ -603,7 +617,10 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\PTbrZ6L+.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\LkDzFx+9.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\8uEP7bxt.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\HwoZOihw.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\djn5S3pO.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\0lHlFQrd.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\MC3NR9dZ.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\82zBV+xn.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\pHBUWS7c.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\3uac3DG2.gz
@@ -614,6 +631,7 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\oVWmPXQt.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\N6m4Ghmr.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\aainxXh5.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\Mo8dXhni.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\+dzLyuk8.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\jWZd+wXP.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\8zW125TO.gz
@@ -625,10 +643,12 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\8IEiQks0.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\eqDltxZV.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\+FtyAyK8.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\+eNXU4on.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\8H5zZykl.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\s3XF9Frg.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\AYRKFYBr.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\o+4IOWED.gz
-C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\fRBdUtc1.gz
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\SVEKmud8.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\jl5S7NDl.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\u8nnK9Tp.gz
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Client\obj\Debug\net5.0\build-gz\WuWHPxsB.gz

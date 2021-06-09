@@ -104,7 +104,7 @@ using JobSearchAssistant.Client.Shared;
 
     private void IncrementCount()
     {
-        currentCount++;
+        currentCount = currentCount + 2;
     }
 
 #line default

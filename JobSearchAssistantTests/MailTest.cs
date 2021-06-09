@@ -1,4 +1,4 @@
-using JobSearchAssistant.Server.Models;
+using JobSearchAssistant.Shared;
 using JobSearchAssistant.Server.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;

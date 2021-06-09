@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace JobSearchAssistant.Server.Models
+namespace JobSearchAssistant.Shared
 {
     public class MailSettings
     {

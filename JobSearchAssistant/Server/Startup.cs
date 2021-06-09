@@ -1,5 +1,5 @@
 using JobSearchAssistant.Server.Data;
-using JobSearchAssistant.Server.Models;
+using JobSearchAssistant.Shared;
 using JobSearchAssistant.Server.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;

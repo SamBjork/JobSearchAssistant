@@ -35,13 +35,13 @@ using JobSearchAssistant.Server.Areas.Identity.Pages;
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Server\Areas\Identity\Pages\_ViewImports.cshtml"
-using JobSearchAssistant.Server.Models;
+using JobSearchAssistant.Shared;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0ea4e2edd7aef7d88ddb6bb3ad20bfc24d25a542", @"/Areas/Identity/Pages/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3416ef80605c196e050a8b6542a0254c857fca84", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7bd6a8634e020aed86c1ca811f3a2b81e9f839bc", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

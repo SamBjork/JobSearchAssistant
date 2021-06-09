@@ -5,7 +5,7 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     },
     {
-      "hash": "sha256-e54qUPvNqcyc+RhNkmRlhgh\/SodLaNlrT\/M5IlTWX\/8=",
+      "hash": "sha256-jlblCkwT93psy++ROAhPu+d4tFmKtfo+qpJtLEjDTg4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -41,8 +41,20 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
+      "hash": "sha256-iZ9DVgqCpE4J2YIouH\/PNbX53CupHEsl+AFN+pCmYlE=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.Internal.dll"
+    },
+    {
+      "hash": "sha256-hOXQre8nvNJtNl2DKn2dFZTlAaqM+ezEDurJluhEm2A=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll"
+    },
+    {
       "hash": "sha256-yIYDnmS0yvrICSm\/fxU\/3plmsIj6yzjYnOGuSQvDuxw=",
       "url": "_framework\/Microsoft.AspNetCore.Html.Abstractions.dll"
+    },
+    {
+      "hash": "sha256-Pr3gJ2ZnYC0LXmEktfbX57Edi686d9R6mQUGBEXpMds=",
+      "url": "_framework\/Microsoft.AspNetCore.Http.Features.dll"
     },
     {
       "hash": "sha256-Nrk\/sxkTZ7u4RptdiqlrDIxD6Jn75o7P3ClM\/NmIZRo=",
@@ -83,6 +95,10 @@
     {
       "hash": "sha256-Ar+h1m90AITRe\/14EGxo4oNUoozlr++Ti0MbplPmj3Q=",
       "url": "_framework\/Microsoft.CodeAnalysis.Workspaces.dll"
+    },
+    {
+      "hash": "sha256-8F+IGIkGOe\/XwyUAtYBpj9KWlp4ar1LN9ITSjDfuHSQ=",
+      "url": "_framework\/Microsoft.Extensions.Caching.Abstractions.dll"
     },
     {
       "hash": "sha256-x9zYR1t1is\/fStNpBiQnXyPdMpLLcQcra3w4RXGSg4o=",
@@ -129,6 +145,14 @@
       "url": "_framework\/Microsoft.Extensions.Http.dll"
     },
     {
+      "hash": "sha256-3TdrgEoLaoMNDXxM5PWufpEIIn+RNaKVepsjcmNpXqs=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Core.dll"
+    },
+    {
+      "hash": "sha256-hmmwPsmU+lWv1dlYaRt0P2EYFwS2Q2b6DaCFDFC2r2s=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Stores.dll"
+    },
+    {
       "hash": "sha256-VlsKv5zXgdK0MrYHXr9XlUCXwuwNI7AUI\/C1PEFXcz4=",
       "url": "_framework\/Microsoft.Extensions.Logging.dll"
     },
@@ -141,7 +165,7 @@
       "url": "_framework\/Microsoft.Extensions.Options.dll"
     },
     {
-      "hash": "sha256-f2PgoftqEkKRuuiAk6S1MHygOuqZBHzB0HOB3vR93TU=",
+      "hash": "sha256-XNHVw5siarTMMQ009PdQgD7MrQ0iqnJ92cJOWSSE1vs=",
       "url": "_framework\/Microsoft.Extensions.Primitives.dll"
     },
     {
@@ -1109,19 +1133,19 @@
       "url": "_framework\/dotnet.5.0.6.js"
     },
     {
-      "hash": "sha256-GPnbKc3BqPBSSb71b4UfLEqBMvhndPWY91YF5R6L1uY=",
+      "hash": "sha256-4hprxOgJ7JW1auuCq\/tcq0pabAFg9OSx36aPU0Q6Gfc=",
       "url": "_framework\/JobSearchAssistant.Shared.dll"
     },
     {
-      "hash": "sha256-Cv\/3FK8SdW4A9QTL5\/RxRyZOT0mBEFDghzUfoLE\/ouU=",
+      "hash": "sha256-SEo3rwzlfFwonBasb0vPQv2giyyylbWE+\/RMbnp7yQY=",
       "url": "_framework\/JobSearchAssistant.Shared.pdb"
     },
     {
-      "hash": "sha256-AMcDedtzPeZDkKHk\/tdYicHWmul+ord6MmSwmDr4OWA=",
+      "hash": "sha256-ll1GeteReRSeI9bZyJjquomKUnvNR6zc8GPZBmje44M=",
       "url": "_framework\/JobSearchAssistant.Client.dll"
     },
     {
-      "hash": "sha256-wBdBh3yQNkWqZnurBDoc1BGaSmLSUerVnt3Vvt2xqPA=",
+      "hash": "sha256-ONPAkOLLjMJfX64iqN2kzFMQBYj7+uX++Jepgww0oVY=",
       "url": "_framework\/JobSearchAssistant.Client.pdb"
     },
     {
@@ -1161,8 +1185,20 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz"
     },
     {
+      "hash": "sha256-2dKaXU5U2pizKHe05ewiC4TydUQDFiTTN7Vrxx+\/1nE=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.Internal.dll.gz"
+    },
+    {
+      "hash": "sha256-lC+bi+NQDSmWfjz2rhaVoPu\/96W6\/Z4RKJgEzuOYV\/o=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll.gz"
+    },
+    {
       "hash": "sha256-kPPK786s\/zZZ4xkhCzbvFmim4iYvo0AlrmRGAlilM9A=",
       "url": "_framework\/Microsoft.AspNetCore.Html.Abstractions.dll.gz"
+    },
+    {
+      "hash": "sha256-\/LWefH+sv0nMoBHSiGMjlBkGoAdDT1a\/jTcWm6GmlnI=",
+      "url": "_framework\/Microsoft.AspNetCore.Http.Features.dll.gz"
     },
     {
       "hash": "sha256-uR9QXbTCaNvgJ417Z66hbkxCnrhhVo+gF8C6b22aUSs=",
@@ -1203,6 +1239,10 @@
     {
       "hash": "sha256-8+SIla1eJ\/UhxG4KuAJvQNvuoUeyRd4Pkwv6Y2V8MQA=",
       "url": "_framework\/Microsoft.CodeAnalysis.Workspaces.dll.gz"
+    },
+    {
+      "hash": "sha256-4pChBvOEgzpmfVdkv9YWvta2oJD9XyYcGfA4WPQzw6k=",
+      "url": "_framework\/Microsoft.Extensions.Caching.Abstractions.dll.gz"
     },
     {
       "hash": "sha256-vwJvf0CyeB3VLdzF9SPGQ2aslb5\/BZWEqYUiyzRD\/zc=",
@@ -1249,6 +1289,14 @@
       "url": "_framework\/Microsoft.Extensions.Http.dll.gz"
     },
     {
+      "hash": "sha256-\/CUYleb0qcTEojgS03fOONZr\/jJ3PZwsa9esjAAUayA=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Core.dll.gz"
+    },
+    {
+      "hash": "sha256-KHoK4\/+mcGISkqMLwhss0eqVLXRSW2bBK6bmaQ1P5Ag=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Stores.dll.gz"
+    },
+    {
       "hash": "sha256-\/OyzmrlW5xT4QqbyVUn5xIdYaafJOu0qnNKz\/UZnlm8=",
       "url": "_framework\/Microsoft.Extensions.Logging.dll.gz"
     },
@@ -1261,7 +1309,7 @@
       "url": "_framework\/Microsoft.Extensions.Options.dll.gz"
     },
     {
-      "hash": "sha256-mMPgGMuMlzTvvndyEG9Q7hF6EnwtfTF5Rn5U4lsaIsc=",
+      "hash": "sha256-gEkPrv0oJkygza3FgGKg1pErAhZASHK4od3VFOcvXBo=",
       "url": "_framework\/Microsoft.Extensions.Primitives.dll.gz"
     },
     {
@@ -2229,11 +2277,11 @@
       "url": "_framework\/dotnet.5.0.6.js.gz"
     },
     {
-      "hash": "sha256-5sGavV0NgvWYDDzWGhYoBYtxU\/o7dhq9jn7pG2XXun0=",
+      "hash": "sha256-tMQPVpcXBkqMvUwYpg5yVSO\/l70smEr\/F+b5rpY1fgM=",
       "url": "_framework\/JobSearchAssistant.Shared.dll.gz"
     },
     {
-      "hash": "sha256-8aM9R9K90X6h+KPDW4OzrEh071mAs7dvAQxjBxAZQAc=",
+      "hash": "sha256-m4yRvtTDoy1DluIFkKnTrpd+If1sNLuuGsZdi\/0QBWc=",
       "url": "css\/app.css"
     },
     {
@@ -2305,5 +2353,5 @@
       "url": "JobSearchAssistant.Client.bundle.scp.css"
     }
   ],
-  "version": "iTr3Pqh3"
+  "version": "MOa9D4nx"
 };

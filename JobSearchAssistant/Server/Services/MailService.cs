@@ -1,4 +1,4 @@
-﻿using JobSearchAssistant.Server.Models;
+﻿using JobSearchAssistant.Shared;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.AspNetCore.Identity.UI.Services;

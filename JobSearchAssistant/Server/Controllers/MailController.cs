@@ -1,4 +1,4 @@
-﻿using JobSearchAssistant.Server.Models;
+﻿using JobSearchAssistant.Shared;
 using JobSearchAssistant.Server.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

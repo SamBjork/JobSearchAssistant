@@ -1,6 +1,6 @@
 ﻿using System;
 using JobSearchAssistant.Server.Data;
-using JobSearchAssistant.Server.Models;
+using JobSearchAssistant.Shared;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;

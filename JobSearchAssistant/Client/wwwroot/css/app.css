@@ -48,3 +48,12 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.center-text {
+    text-align: center;
+}
