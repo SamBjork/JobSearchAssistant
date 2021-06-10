@@ -1,3 +1,4 @@
+using JobSearchAssistant.Client.Services;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,8 @@ namespace JobSearchAssistant.Client
             builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("JobSearchAssistant.ServerAPI"));
 
             builder.Services.AddApiAuthorization();
+            builder.Services.AddScoped<IJobService, JobService>();
+
 
             await builder.Build().RunAsync();
         }

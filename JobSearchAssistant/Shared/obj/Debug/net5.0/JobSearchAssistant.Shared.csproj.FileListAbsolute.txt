@@ -2,7 +2,6 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\bin\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\bin\Debug\net5.0\JobSearchAssistant.Shared.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\bin\Debug\net5.0\ref\JobSearchAssistant.Shared.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\bin\Debug\net5.0\JobSearchAssistant.Shared.pdb
-C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\JobSearchAssistant.Shared.csprojAssemblyReference.cache
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\JobSearchAssistant.Shared.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\JobSearchAssistant.Shared.AssemblyInfoInputs.cache
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\JobSearchAssistant.Shared.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Deb
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\JobSearchAssistant.Shared.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\ref\JobSearchAssistant.Shared.dll
 C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\JobSearchAssistant.Shared.pdb
+C:\Users\zigge\source\repos\JobSearchAssistant\JobSearchAssistant\Shared\obj\Debug\net5.0\JobSearchAssistant.Shared.csprojAssemblyReference.cache

@@ -4,48 +4,42 @@
 @using JobSearchAssistant.Shared
 @attribute [Authorize]
 @inject HttpClient Http
+@inject JobSearchAssistant.Client.Services.IJobService JobService
 
 <h3>Jobs</h3>
 
-@*<button @onclick="Refresh">Refresh</button>
-@if (jobs.Length == 0)
-{
-    <p><em>No jobs to show.</em></p>
-}
-<table class="table">
-    <thead>
-        <tr>
-            <th>Company</th>
-            <th>Status</th>
-            <th>Position</th>
-            <th>Date Applied</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var job in jobs)
-        {
+<button @onclick="Refresh">Refresh</button>
+    @if (jobs.Count == 0)
+    {
+        <p><em>No jobs to show.</em></p>
+    }
+    <table class="table">
+        <thead>
             <tr>
-                <td>@job.CompanyName</td>
-                <td>@job.Status</td>
-                <td>@job.Position</td>
-                <td>@job.AppliedDate</td>
+                <th>Company</th>
+                <th>Status</th>
+                <th>Position</th>
+                <th>Date Applied</th>
             </tr>
-        }
-    </tbody>
-</table>*@
+        </thead>
+        <tbody>
+            @foreach (var job in jobs)
+            {
+                <tr>
+                    <td>@job.CompanyName</td>
+                    <td>@job.Status</td>
+                    <td>@job.Position</td>
+                    <td>@job.AppliedDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
 @code {
-    private Job[] jobs;
+    private List<Job> jobs = new List<Job>();
     protected override async Task OnInitializedAsync()
     {
-        //try
-        //{
-        //    jobs = await Http.GetFromJsonAsync<Job[]>("Job");
-        //}
-        //catch (AccessTokenNotAvailableException exception)
-        //{
-        //    exception.Redirect();
-        //}
+        jobs = await JobService.GetJobs();
     }
     public async Task Refresh()
     {

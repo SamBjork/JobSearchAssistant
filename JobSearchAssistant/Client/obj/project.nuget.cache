@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BxzZguSty5TqZn7CVV34ocohdcB8+pYcl7WfpMeGh9FB4Ne3A+HSjjJFb/aE15Zj1TO7UPcc8u7tOgCo1//cIw==",
+  "dgSpecHash": "1plQADk2RZb+FrQ0+7SUE4C10iFvvjIzAHDFVYJoiWLWQBfUvUJbFhv0d7S7+HgdzH/Ty7rZrfBYXvEPr6Qsdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\zigge\\source\\repos\\JobSearchAssistant\\JobSearchAssistant\\Client\\JobSearchAssistant.Client.csproj",
   "expectedPackageFiles": [
@@ -163,7 +163,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\zigge\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.6\\microsoft.netcore.app.runtime.browser-wasm.5.0.6.nupkg.sha512"
+    "C:\\Users\\zigge\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.7\\microsoft.netcore.app.runtime.browser-wasm.5.0.7.nupkg.sha512"
   ],
   "logs": []
 }
