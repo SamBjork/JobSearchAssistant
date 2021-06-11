@@ -5,44 +5,106 @@
 @attribute [Authorize]
 @inject HttpClient Http
 @inject JobSearchAssistant.Client.Services.IJobService JobService
+@inject AuthenticationStateProvider authprovider
+
 
 <h3>Jobs</h3>
 
 <button @onclick="Refresh">Refresh</button>
-    @if (jobs.Count == 0)
-    {
-        <p><em>No jobs to show.</em></p>
-    }
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Company</th>
-                <th>Status</th>
-                <th>Position</th>
-                <th>Date Applied</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var job in jobs)
-            {
-                <tr>
-                    <td>@job.CompanyName</td>
-                    <td>@job.Status</td>
-                    <td>@job.Position</td>
-                    <td>@job.AppliedDate</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+@if (jobs.Count == 0)
+{
+    <p><em>No jobs to show.</em></p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th>Status</th>
+            <th>Position</th>
+            <th>Date Applied</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var job in jobs)
+        {
+        <tr>
+            <td>@job.CompanyName</td>
+            <td>@job.Status</td>
+            <td>@job.Position</td>
+            <td>@job.AppliedDate</td>
+            <td>
+                <button class="oi oi-trash" @onclick="() => DeleteJob(job.Id)"></button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<EditForm Model="@newJob" OnValidSubmit="InsertJobData">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label for="company-name">Company Name</label>
+        <br />
+        <InputText id="company-name" @bind-Value="newJob.CompanyName" ckass="form-control" />
+        <ValidationMessage For="@(() => newJob.CompanyName)" />
+    </div>
+    <div class="form-group">
+        <label for="status">Status</label>
+        <br />
+        <InputText id="status" @bind-Value="newJob.Status" ckass="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="position">Position</label>
+        <br />
+        <InputText id="position" @bind-Value="newJob.Position" ckass="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="applied-date">Date Applied</label>
+        <br />
+        <InputDate id="applied-date" @bind-Value="newJob.AppliedDate" ckass="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</EditForm>
+@*<form>
+        <input @bind="newJob.CompanyName" placeholder="Company Name" />
+        <input @bind="newJob.Status" placeholder="Status" />
+        <input @bind="newJob.Position" placeholder="Position" />
+        <input @bind="newJob.AppliedDate" type="datetime" placeholder="Date Applied" />
+        <button @onclick="InsertJobData">Add Job</button>
+    </form>*@
 
 @code {
+    Job newJob = new Job();
     private List<Job> jobs = new List<Job>();
+    private string currentUserId;
     protected override async Task OnInitializedAsync()
     {
-        jobs = await JobService.GetJobs();
+        var authState = await authprovider.GetAuthenticationStateAsync();
+        var claims = authState.User.Claims.ToList();
+        currentUserId = claims[2].Value;
+        newJob.UserId = currentUserId;
+        newJob.AppliedDate = DateTime.Today;
+        jobs = await JobService.GetJobsByUserId(currentUserId);
     }
     public async Task Refresh()
     {
+        jobs = await JobService.GetJobs();
+    }
+    public async void InsertJobData()
+    {
+
+        newJob.UserId = currentUserId;
+        var result = await JobService.CreateNewJob(newJob);
+        jobs = await JobService.GetJobs();
+
+    }
+    public async void DeleteJob(int id)
+    {
+        JobService.DeleteJobById(id);
+        jobs = await JobService.GetJobs();
 
     }
 }
+
+
+

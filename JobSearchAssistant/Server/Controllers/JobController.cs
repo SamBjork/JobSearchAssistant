@@ -42,23 +42,56 @@ namespace JobSearchAssistant.Server.Controllers
         {
             return Ok(_context.Jobs);
         }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Job>> GetJobById(int id)
+
+        [HttpGet("byjobid/{id}")]
+        public ActionResult<Job> GetJobById(int id)
         {
             try
             {
 
-                //var result = _jobService.GetJobById(id);
-                var post = _context.Jobs.FirstOrDefault(p => p.Id.Equals(id));
-                if (post == null)
+                var job = _context.Jobs.Where(p => p.Id.Equals(id));
+                if (job == null)
                     return NotFound();
 
-                return Ok();
+                return Ok(job);
             }
             catch (Exception e)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Database failure {e.Message}");
             }
+        }
+        [HttpGet("byuserid/{userId}")]
+        public ActionResult<List<Job>> GetJobsByUserId(string userId)
+        {
+            try
+            {
+
+                var jobs = _context.Jobs.Where(p => p.UserId.Equals(userId));
+                if (jobs == null)
+                    return NotFound();
+
+                return Ok(jobs);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Database failure {e.Message}");
+            }
+        }
+        [HttpPost]
+        public async Task<ActionResult<Job>> CreateNewJob(Job request)
+        {
+            _context.Add(request);
+            await _context.SaveChangesAsync();
+
+            return request;
+        }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Job>> DeleteJobById(int id)
+        {
+            var job = _context.Jobs.FirstOrDefault(e => e.Id.Equals(id));
+            _context.Jobs.Remove(job);
+            await _context.SaveChangesAsync();
+            return Ok();
         }
     }
 }

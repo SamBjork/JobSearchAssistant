@@ -20,23 +20,22 @@ namespace JobSearchAssistant.Client.Services
             var result = await _http.PostAsJsonAsync("api/Job", request);
             return await result.Content.ReadFromJsonAsync<Job>();
         }
+        public async Task<List<Job>> GetJobsByUserId(string userId)
+        {
+            return  await _http.GetFromJsonAsync<List<Job>>($"api/Job/byuserid/{userId}");
+        }
         public async Task<Job> GetJobById(int id)
         {
-            var result = await _http.GetAsync($"api/Job/{id}");
-            if(result.StatusCode != System.Net.HttpStatusCode.OK)
-            {
-                var message = await result.Content.ReadAsStringAsync();
-                Console.WriteLine(message);
-                return new Job { Status = message };
-            }
-            else
-            {
-                return await result.Content.ReadFromJsonAsync<Job>();
-            }
+            return await _http.GetFromJsonAsync<Job>($"api/Job/byjobid/{id}");
         }
         public async Task<List<Job>> GetJobs()
         {
             return await _http.GetFromJsonAsync<List<Job>>("api/Job");
+        }
+        public async Task<Job> DeleteJobById(int id)
+        {
+            var result = await _http.DeleteAsync($"api/Job/{id}");
+            return await result.Content.ReadFromJsonAsync<Job>();
         }
     }
 }
