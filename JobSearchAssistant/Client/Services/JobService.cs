@@ -22,7 +22,7 @@ namespace JobSearchAssistant.Client.Services
         }
         public async Task<List<Job>> GetJobsByUserId(string userId)
         {
-            return  await _http.GetFromJsonAsync<List<Job>>($"api/Job/byuserid/{userId}");
+            return await _http.GetFromJsonAsync<List<Job>>($"api/Job/byuserid/{userId}");
         }
         public async Task<Job> GetJobById(int id)
         {
@@ -32,10 +32,15 @@ namespace JobSearchAssistant.Client.Services
         {
             return await _http.GetFromJsonAsync<List<Job>>("api/Job");
         }
-        public async Task<Job> DeleteJobById(int id)
+        //public async Task<Job> UpdateJob(Job request)
+        //{
+        //    var result = await _http.PutAsJsonAsync<Job>("api/Job", request);
+        //    return await result.Content.ReadFromJsonAsync<Job>();
+        //}
+
+        public async Task DeleteJobById(int id)
         {
             var result = await _http.DeleteAsync($"api/Job/{id}");
-            return await result.Content.ReadFromJsonAsync<Job>();
         }
     }
 }

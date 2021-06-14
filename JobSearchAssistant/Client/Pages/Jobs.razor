@@ -6,11 +6,13 @@
 @inject HttpClient Http
 @inject JobSearchAssistant.Client.Services.IJobService JobService
 @inject AuthenticationStateProvider authprovider
+@inject NavigationManager navigationManager
 
 
 <h3>Jobs</h3>
 
 <button @onclick="Refresh">Refresh</button>
+<button @onclick="CreateNewJob">Create new Job</button>
 @if (jobs.Count == 0)
 {
     <p><em>No jobs to show.</em></p>
@@ -28,52 +30,80 @@
     <tbody>
         @foreach (var job in jobs)
         {
+            if (job.IsEditing)
+            {
         <tr>
-            <td>@job.CompanyName</td>
-            <td>@job.Status</td>
-            <td>@job.Position</td>
-            <td>@job.AppliedDate</td>
             <td>
-                <button class="oi oi-trash" @onclick="() => DeleteJob(job.Id)"></button>
+                <input type="text" class="form-control" placeholder="Company Name" @bind="job.CompanyName" />
+            </td>
+            <td>
+                <input type="text" class="form-control" placeholder="Status" @bind="job.Status" />
+            </td>
+            <td>
+                <input type="text" class="form-control" placeholder="Position" @bind="job.Position" />
+            </td>
+            <td>
+                <input type="date" class="form-control" placeholder="Date Applied" @bind="job.AppliedDate" />
+            </td>
+            <td>
+                <button type="button" class="oi oi-check" @onclick="() => UpdateJob(job)"></button>
+            </td>
+            <td>
+                <button type="button" class="oi oi-x" @onclick="() => EnableEditing(false, job)"></button>
             </td>
         </tr>
+            }
+            else
+            {
+                <tr>
+                    <td>@job.CompanyName</td>
+                    <td>@job.Status</td>
+                    <td>@job.Position</td>
+                    <td>@job.AppliedDate</td>
+                    <td>
+                        <button type="button" class="oi oi-pencil" @onclick="() => EnableEditing(true, job)"></button>
+                    </td>
+                    <td>
+                        <button class="oi oi-trash" @onclick="() => DeleteJob(job.Id)"></button>
+                    </td>
+                </tr>
+            }
         }
     </tbody>
 </table>
-<EditForm Model="@newJob" OnValidSubmit="InsertJobData">
-    <DataAnnotationsValidator />
-    <div class="form-group">
-        <label for="company-name">Company Name</label>
-        <br />
-        <InputText id="company-name" @bind-Value="newJob.CompanyName" ckass="form-control" />
-        <ValidationMessage For="@(() => newJob.CompanyName)" />
-    </div>
-    <div class="form-group">
-        <label for="status">Status</label>
-        <br />
-        <InputText id="status" @bind-Value="newJob.Status" ckass="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="position">Position</label>
-        <br />
-        <InputText id="position" @bind-Value="newJob.Position" ckass="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="applied-date">Date Applied</label>
-        <br />
-        <InputDate id="applied-date" @bind-Value="newJob.AppliedDate" ckass="form-control" />
-    </div>
-    <button type="submit" class="btn btn-primary">Create</button>
-</EditForm>
-@*<form>
-        <input @bind="newJob.CompanyName" placeholder="Company Name" />
-        <input @bind="newJob.Status" placeholder="Status" />
-        <input @bind="newJob.Position" placeholder="Position" />
-        <input @bind="newJob.AppliedDate" type="datetime" placeholder="Date Applied" />
-        <button @onclick="InsertJobData">Add Job</button>
-    </form>*@
+@if (createNewJob)
+{
+    <EditForm Model="@newJob" OnValidSubmit="InsertJobData">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <br />
+            <InputText id="company-name" @bind-Value="newJob.CompanyName" ckass="form-control" />
+            <ValidationMessage For="@(() => newJob.CompanyName)" />
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <br />
+            <InputText id="status" @bind-Value="newJob.Status" ckass="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="position">Position</label>
+            <br />
+            <InputText id="position" @bind-Value="newJob.Position" ckass="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="applied-date">Date Applied</label>
+            <br />
+            <InputDate id="applied-date" @bind-Value="newJob.AppliedDate" ckass="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </EditForm>
+}
+
 
 @code {
+    bool isEditing;
+    bool createNewJob = false;
     Job newJob = new Job();
     private List<Job> jobs = new List<Job>();
     private string currentUserId;
@@ -88,21 +118,48 @@
     }
     public async Task Refresh()
     {
-        jobs = await JobService.GetJobs();
+        jobs = await JobService.GetJobsByUserId(currentUserId);
     }
-    public async void InsertJobData()
+    private void EnableEditing(bool flag, Job job)
     {
-
+        job.IsEditing = flag;
+    }
+    public async void UpdateJob(Job job)
+    {
+        EnableEditing(false, job);
+        await Http.PutAsJsonAsync<Job>($"api/Job/{job.Id}", job);
+        navigationManager.NavigateTo("/jobs");
+    }
+    public void CreateNewJob()
+    {
+        if (createNewJob != true)
+            createNewJob = true;
+        else
+            createNewJob = false;
+    }
+    public async Task InsertJobData()
+    {
         newJob.UserId = currentUserId;
         var result = await JobService.CreateNewJob(newJob);
-        jobs = await JobService.GetJobs();
-
+        if(result != null)
+        {
+            createNewJob = false;
+            await Refresh();
+        }
     }
-    public async void DeleteJob(int id)
-    {
-        JobService.DeleteJobById(id);
-        jobs = await JobService.GetJobs();
 
+    public async Task DeleteJob(int id)
+    {
+        try
+        {
+            await JobService.DeleteJobById(id);
+            await Refresh();
+        }
+        catch (Exception ex)
+        {
+
+            throw;
+        }
     }
 }
 

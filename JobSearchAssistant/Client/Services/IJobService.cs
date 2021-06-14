@@ -12,6 +12,6 @@ namespace JobSearchAssistant.Client.Services
         Task<List<Job>> GetJobsByUserId(string userId);
         Task<Job> GetJobById(int id);
         Task<Job> CreateNewJob(Job request);
-        Task<Job> DeleteJobById(int id);
+        Task DeleteJobById(int id);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace JobSearchAssistant.Shared
@@ -14,5 +15,7 @@ namespace JobSearchAssistant.Shared
         public DateTime AppliedDate { get; set; }
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
+        [NotMapped]
+        public bool IsEditing{ get; set; }
     }
 }

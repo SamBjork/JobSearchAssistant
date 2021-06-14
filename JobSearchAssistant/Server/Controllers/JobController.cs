@@ -24,19 +24,7 @@ namespace JobSearchAssistant.Server.Controllers
         {
             _context = context;
         }
-        //public IEnumerable<Job> Get()
-        //{
-        //    try
-        //    {
-        //        var results = _jobService.GetJobs();
 
-        //        return results;
-        //    }
-        //    catch
-        //    {
-        //        throw;
-        //    }
-        //}
         [HttpGet]
         public ActionResult<List<Job>> GetAllJobs()
         {
@@ -84,6 +72,13 @@ namespace JobSearchAssistant.Server.Controllers
             await _context.SaveChangesAsync();
 
             return request;
+        }
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Job>> UpdateJob(Job request)
+        {
+            _context.Update(request);
+            await _context.SaveChangesAsync();
+            return Ok();
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult<Job>> DeleteJobById(int id)
