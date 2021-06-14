@@ -1,8 +1,44 @@
 ﻿@page "/"
+@using JobSearchAssistant.Shared
+@inject AuthenticationStateProvider authprovider
+@inject JobSearchAssistant.Client.Services.IJobService JobService
 
-<h1 class="title">Welcome to Job Search Assistant!</h1>
 
-<p class="center-text">This web app helps you store and keep track of all important information concering your job applications.</p>
-<br />
-<br />
-<h3 class="center-text">Please register an account or log in to take part!</h3>
+<AuthorizeView>
+    <Authorized>
+        <h1 class="title">Welcome to Job Search Assistant, @context.User.Identity.Name!</h1>
+
+        <h3 class="title">Here are some of your stats:</h3>
+
+        <h4 class="title">Job applications in progress: @jobs.Count()</h4>
+    </Authorized>
+    <NotAuthorized>
+
+        <h1 class="title">Welcome to Job Search Assistant!</h1>
+
+        <p class="center-text">This web app helps you store and keep track of all important information concering your job applications.</p>
+        <br />
+        <br />
+        <h3 class="center-text">Please register an account or log in to take part!</h3>
+
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    public string CurrentUserId;
+    private List<Job> jobs = new List<Job>();
+    bool authorized = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+
+        var authState = await authprovider.GetAuthenticationStateAsync();
+        if(authState.User.Identity.IsAuthenticated)
+        {
+            var claims = authState.User.Claims.ToList();
+            CurrentUserId = claims[2].Value;
+            jobs = await JobService.GetJobsByUserId(CurrentUserId);
+        }
+    }
+}

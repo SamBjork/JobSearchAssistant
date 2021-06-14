@@ -11,8 +11,6 @@
 
 <h3>Jobs</h3>
 
-<button @onclick="Refresh">Refresh</button>
-<button @onclick="CreateNewJob">Create new Job</button>
 @if (jobs.Count == 0)
 {
     <p><em>No jobs to show.</em></p>
@@ -32,45 +30,47 @@
         {
             if (job.IsEditing)
             {
-        <tr>
-            <td>
-                <input type="text" class="form-control" placeholder="Company Name" @bind="job.CompanyName" />
-            </td>
-            <td>
-                <input type="text" class="form-control" placeholder="Status" @bind="job.Status" />
-            </td>
-            <td>
-                <input type="text" class="form-control" placeholder="Position" @bind="job.Position" />
-            </td>
-            <td>
-                <input type="date" class="form-control" placeholder="Date Applied" @bind="job.AppliedDate" />
-            </td>
-            <td>
-                <button type="button" class="oi oi-check" @onclick="() => UpdateJob(job)"></button>
-            </td>
-            <td>
-                <button type="button" class="oi oi-x" @onclick="() => EnableEditing(false, job)"></button>
-            </td>
-        </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Company Name" @bind="job.CompanyName" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Status" @bind="job.Status" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Position" @bind="job.Position" />
+                    </td>
+                    <td>
+                        <input type="date" class="form-control" placeholder="Date Applied" @bind="job.AppliedDate" />
+                    </td>
+                    <td>
+                        <button type="button" class="oi oi-check" @onclick="() => UpdateJob(job)"></button>
+                    </td>
+                    <td>
+                        <button type="button" class="oi oi-x" @onclick="() => EnableEditing(false, job)"></button>
+                    </td>
+                </tr>
             }
             else
             {
-                <tr>
-                    <td>@job.CompanyName</td>
-                    <td>@job.Status</td>
-                    <td>@job.Position</td>
-                    <td>@job.AppliedDate</td>
-                    <td>
-                        <button type="button" class="oi oi-pencil" @onclick="() => EnableEditing(true, job)"></button>
-                    </td>
-                    <td>
-                        <button class="oi oi-trash" @onclick="() => DeleteJob(job.Id)"></button>
-                    </td>
-                </tr>
+    <tr>
+        <td>@job.CompanyName</td>
+        <td>@job.Status</td>
+        <td>@job.Position</td>
+        <td>@job.AppliedDate.Date.ToString("yyyy-MM-dd")</td>
+        <td>
+            <button type="button" class="oi oi-pencil" @onclick="() => EnableEditing(true, job)"></button>
+        </td>
+        <td>
+            <button class="oi oi-trash" @onclick="() => DeleteJob(job.Id)"></button>
+        </td>
+    </tr>
             }
         }
     </tbody>
 </table>
+<button @onclick="CreateNewJob">Create new Job</button>
+
 @if (createNewJob)
 {
     <EditForm Model="@newJob" OnValidSubmit="InsertJobData">
@@ -141,8 +141,10 @@
     {
         newJob.UserId = currentUserId;
         var result = await JobService.CreateNewJob(newJob);
-        if(result != null)
+        if (result != null)
         {
+            newJob = new Job();
+            newJob.AppliedDate = DateTime.Today;
             createNewJob = false;
             await Refresh();
         }
