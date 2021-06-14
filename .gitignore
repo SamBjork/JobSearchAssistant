@@ -32,7 +32,7 @@ Project_Readme.html
 *.userprefs
 
 # Build results
-[Dd]ebug/
+debug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -40,8 +40,8 @@ x64/
 x86/
 build/
 bld/
-[Bb]in/
-[Oo]bj/
+bin/
+obj/
 
 # Visual Studo 2015 cache/options directory
 .vs/
