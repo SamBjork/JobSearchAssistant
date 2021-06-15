@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSearchAssistant.Server", "JobSearchAssistant\Server\JobSearchAssistant.Server.csproj", "{EF303943-D9D5-4BE3-BF79-7F2269D9B9E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchAssistant.Server", "JobSearchAssistant\Server\JobSearchAssistant.Server.csproj", "{EF303943-D9D5-4BE3-BF79-7F2269D9B9E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSearchAssistant.Client", "JobSearchAssistant\Client\JobSearchAssistant.Client.csproj", "{5C704630-D580-4229-B020-00BA5FCB253F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchAssistant.Client", "JobSearchAssistant\Client\JobSearchAssistant.Client.csproj", "{5C704630-D580-4229-B020-00BA5FCB253F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSearchAssistant.Shared", "JobSearchAssistant\Shared\JobSearchAssistant.Shared.csproj", "{DBF35951-C86C-4B04-8104-CCE0496C4C6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchAssistant.Shared", "JobSearchAssistant\Shared\JobSearchAssistant.Shared.csproj", "{DBF35951-C86C-4B04-8104-CCE0496C4C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSearchAssistantTests", "JobSearchAssistantTests\JobSearchAssistantTests.csproj", "{9AB21B61-E72F-4F80-A237-EAF72A81FA08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchAssistantTests", "JobSearchAssistantTests\JobSearchAssistantTests.csproj", "{9AB21B61-E72F-4F80-A237-EAF72A81FA08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

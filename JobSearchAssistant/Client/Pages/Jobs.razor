@@ -2,6 +2,7 @@
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @using JobSearchAssistant.Shared
+@using BlazorPro.Spinkit
 @attribute [Authorize]
 @inject HttpClient Http
 @inject JobSearchAssistant.Client.Services.IJobService JobService
@@ -10,65 +11,74 @@
 
 
 <h3>Jobs</h3>
+<SpinLoader IsLoading="IsLoading">
+    <LoadingTemplate>
+        <Circle Center="true" Size="60px" />
+    </LoadingTemplate>
+    <ContentTemplate>
 
-@if (jobs.Count == 0)
-{
-    <p><em>No jobs to show.</em></p>
-}
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Company</th>
-            <th>Status</th>
-            <th>Position</th>
-            <th>Date Applied</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var job in jobs)
+        @if (jobs.Count == 0)
         {
-            if (job.IsEditing)
-            {
-                <tr>
-                    <td>
-                        <input type="text" class="form-control" placeholder="Company Name" @bind="job.CompanyName" />
-                    </td>
-                    <td>
-                        <input type="text" class="form-control" placeholder="Status" @bind="job.Status" />
-                    </td>
-                    <td>
-                        <input type="text" class="form-control" placeholder="Position" @bind="job.Position" />
-                    </td>
-                    <td>
-                        <input type="date" class="form-control" placeholder="Date Applied" @bind="job.AppliedDate" />
-                    </td>
-                    <td>
-                        <button type="button" class="oi oi-check" @onclick="() => UpdateJob(job)"></button>
-                    </td>
-                    <td>
-                        <button type="button" class="oi oi-x" @onclick="() => EnableEditing(false, job)"></button>
-                    </td>
-                </tr>
-            }
-            else
-            {
-    <tr>
-        <td>@job.CompanyName</td>
-        <td>@job.Status</td>
-        <td>@job.Position</td>
-        <td>@job.AppliedDate.Date.ToString("yyyy-MM-dd")</td>
-        <td>
-            <button type="button" class="oi oi-pencil" @onclick="() => EnableEditing(true, job)"></button>
-        </td>
-        <td>
-            <button class="oi oi-trash" @onclick="() => DeleteJob(job.Id)"></button>
-        </td>
-    </tr>
-            }
+            <p><em>No jobs to show.</em></p>
         }
-    </tbody>
-</table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Status</th>
+                    <th>Position</th>
+                    <th>Date Applied</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var job in jobs)
+                {
+                    if (job.IsEditing)
+                    {
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" placeholder="Company Name" @bind="job.CompanyName" />
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" placeholder="Status" @bind="job.Status" />
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" placeholder="Position" @bind="job.Position" />
+                            </td>
+                            <td>
+                                <input type="date" class="form-control" placeholder="Date Applied" @bind="job.AppliedDate" />
+                            </td>
+                            <td>
+                                <button type="button" class="oi oi-check" @onclick="() => UpdateJob(job)"></button>
+                            </td>
+                            <td>
+                                <button type="button" class="oi oi-x" @onclick="() => EnableEditing(false, job)"></button>
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>@job.CompanyName</td>
+                            <td>@job.Status</td>
+                            <td>@job.Position</td>
+                            <td>@job.AppliedDate.Date.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                <button type="button" class="oi oi-pencil" @onclick="() => EnableEditing(true, job)"></button>
+                            </td>
+                            <td>
+                                <button class="oi oi-trash" @onclick="() => DeleteJob(job.Id)"></button>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </ContentTemplate>
+</SpinLoader>
+
 <button @onclick="CreateNewJob">Create new Job</button>
 
 @if (createNewJob)
@@ -102,6 +112,7 @@
 
 
 @code {
+    public bool IsLoading = true;
     bool isEditing;
     bool createNewJob = false;
     Job newJob = new Job();
@@ -115,10 +126,13 @@
         newJob.UserId = currentUserId;
         newJob.AppliedDate = DateTime.Today;
         jobs = await JobService.GetJobsByUserId(currentUserId);
+        IsLoading = false;
     }
     public async Task Refresh()
     {
+        IsLoading = true;
         jobs = await JobService.GetJobsByUserId(currentUserId);
+        IsLoading = false;
     }
     private void EnableEditing(bool flag, Job job)
     {
