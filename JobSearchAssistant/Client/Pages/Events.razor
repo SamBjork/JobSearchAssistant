@@ -1,7 +1,180 @@
 ﻿@page "/events"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using JobSearchAssistant.Shared
+@using BlazorPro.Spinkit
+@attribute [Authorize]
+@inject HttpClient Http
+@inject JobSearchAssistant.Client.Services.IEventService EventService
+@inject AuthenticationStateProvider authprovider
+@inject NavigationManager navigationManager
 
 <h3>Events</h3>
 
+<SpinLoader IsLoading="IsLoading">
+    <LoadingTemplate>
+        <Circle Center="true" Size="60px" />
+    </LoadingTemplate>
+    <ContentTemplate>
+
+
+        @if (events.Count == 0)
+        {
+            <p><em>No events to show.</em></p>
+        }
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Interviewer</th>
+                    <th>Info</th>
+                    <th>Date and Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var jobEvent in events)
+                {
+                    if (jobEvent.IsEditing)
+                    {
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" placeholder="Company Name" @bind="jobEvent.CompanyName" />
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" placeholder="Status" @bind="jobEvent.InterviewerName" />
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" placeholder="Position" @bind="jobEvent.OtherInfo" />
+                            </td>
+                            <td>
+                                <input type="datetime-local" class="form-control" @bind:format="yyyy-MM-ddTHH:mm" @bind="jobEvent.DateTime" />
+                            </td>
+                            <td>
+                                <button type="button" class="oi oi-check" @onclick="() => UpdateJob(jobEvent)"></button>
+                            </td>
+                            <td>
+                                <button type="button" class="oi oi-x" @onclick="() => EnableEditing(false, jobEvent)"></button>
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>@jobEvent.CompanyName</td>
+                            <td>@jobEvent.InterviewerName</td>
+                            <td>@jobEvent.OtherInfo</td>
+                            <td>@jobEvent.DateTime</td>
+                            <td>
+                                <button type="button" class="oi oi-pencil" @onclick="() => EnableEditing(true, jobEvent)"></button>
+                            </td>
+                            <td>
+                                <button class="oi oi-trash" @onclick="() => DeleteEvent(jobEvent.Id)"></button>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </ContentTemplate>
+</SpinLoader>
+
+<button @onclick="CreateNewEvent">Create new Event</button>
+
+@if (createNewEvent)
+{
+    <EditForm Model="@newEvent" OnValidSubmit="InsertEventData">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <br />
+            <InputText id="company-name" @bind-Value="newEvent.CompanyName" class="form-control" />
+            <ValidationMessage For="@(() => newEvent.CompanyName)" />
+        </div>
+        <div class="form-group">
+            <label for="interviewername">Interviewer Name</label>
+            <br />
+            <InputText id="interviewername" @bind-Value="newEvent.InterviewerName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="otherinfo">Other Info</label>
+            <br />
+            <InputText id="otherinfo" @bind-Value="newEvent.OtherInfo" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="applied-date">Date Applied</label>
+            <br />
+            <input id="applied-date" type="datetime-local" class="form-control" placeholder="Date Applied" @bind="newEvent.DateTime" />
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </EditForm>
+}
+
 @code {
 
+    public bool IsLoading = true;
+    bool isEditing;
+    bool createNewEvent = false;
+    Event newEvent = new Event();
+    private List<Event> events = new List<Event>();
+    private string currentUserId;
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authprovider.GetAuthenticationStateAsync();
+        var claims = authState.User.Claims.ToList();
+        currentUserId = claims[2].Value;
+        newEvent.UserId = currentUserId;
+        newEvent.DateTime = DateTime.Today;
+        events = await EventService.GetEventsByUserId(currentUserId);
+        IsLoading = false;
+    }
+    public async Task Refresh()
+    {
+        IsLoading = true;
+        events = await EventService.GetEventsByUserId(currentUserId);
+        IsLoading = false;
+    }
+    private void EnableEditing(bool flag, Event jobEvent)
+    {
+        jobEvent.IsEditing = flag;
+    }
+    public async void UpdateJob(Event jobEvent)
+    {
+        EnableEditing(false, jobEvent);
+        await Http.PutAsJsonAsync<Event>($"api/Event/{jobEvent.Id}", jobEvent);
+        navigationManager.NavigateTo("/events");
+    }
+    public void CreateNewEvent()
+    {
+        if (createNewEvent != true)
+            createNewEvent = true;
+        else
+            createNewEvent = false;
+    }
+    public async Task InsertEventData()
+    {
+        newEvent.UserId = currentUserId;
+        var result = await EventService.CreateNewEvent(newEvent);
+        if (result != null)
+        {
+            newEvent = new Event();
+            newEvent.DateTime = DateTime.Today;
+            createNewEvent = false;
+            await Refresh();
+        }
+    }
+
+    public async Task DeleteEvent(int id)
+    {
+        try
+        {
+            await EventService.DeleteEventById(id);
+            await Refresh();
+        }
+        catch (Exception ex)
+        {
+
+            throw;
+        }
+    }
 }

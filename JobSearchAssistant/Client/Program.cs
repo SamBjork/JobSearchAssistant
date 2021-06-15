@@ -27,6 +27,7 @@ namespace JobSearchAssistant.Client
 
             builder.Services.AddApiAuthorization();
             builder.Services.AddScoped<IJobService, JobService>();
+            builder.Services.AddScoped<IEventService, EventService>();
 
 
             await builder.Build().RunAsync();

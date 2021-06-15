@@ -12,8 +12,10 @@ namespace JobSearchAssistant.Shared
         public string CompanyName{ get; set; }
         public string InterviewerName { get; set; }
         public string OtherInfo { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime DateTime { get; set; } 
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
+        [NotMapped]
+        public bool IsEditing { get; set; }
     }
 }
