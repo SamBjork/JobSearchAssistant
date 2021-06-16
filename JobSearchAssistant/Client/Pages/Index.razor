@@ -2,15 +2,39 @@
 @using JobSearchAssistant.Shared
 @inject AuthenticationStateProvider authprovider
 @inject JobSearchAssistant.Client.Services.IJobService JobService
+@inject JobSearchAssistant.Client.Services.IEventService EventService
 
 
 <AuthorizeView>
     <Authorized>
-        <h1 class="title">Welcome to Job Search Assistant, @context.User.Identity.Name!</h1>
-
-        <h3 class="title">Here are some of your stats:</h3>
-
-        <h4 class="title">Job applications in progress: @jobs.Count()</h4>
+        <h2 class="title">Welcome to Job Search Assistant!</h2>
+        <br />
+        <br />
+        <br />
+        @if (jobs.Count == 1)
+        {
+            <h4>You have: @jobs.Count() job application in progress.</h4>
+        }
+        else if (jobs.Count > 1)
+        {
+            <h4>You have: @jobs.Count() job applications in progress.</h4>
+        }
+        else
+        {
+            <h4>You have no job applications in progess.</h4>
+        }
+        @if (jobEvents.Count == 1)
+        {
+            <h4>You have: @jobEvents.Count() upcoming event.</h4>
+        }
+        else if (jobEvents.Count > 1)
+        {
+            <h4>You have: @jobEvents.Count() upcoming events.</h4>
+        }
+        else
+        {
+        <h4>You have no upcoming events.</h4>
+        }
     </Authorized>
     <NotAuthorized>
 
@@ -27,6 +51,7 @@
 @code {
     public string CurrentUserId;
     private List<Job> jobs = new List<Job>();
+    private List<Event> jobEvents = new List<Event>();
     bool authorized = false;
 
     protected override async Task OnInitializedAsync()
@@ -34,11 +59,12 @@
         base.OnInitialized();
 
         var authState = await authprovider.GetAuthenticationStateAsync();
-        if(authState.User.Identity.IsAuthenticated)
+        if (authState.User.Identity.IsAuthenticated)
         {
             var claims = authState.User.Claims.ToList();
             CurrentUserId = claims[2].Value;
             jobs = await JobService.GetJobsByUserId(CurrentUserId);
+            jobEvents = await EventService.GetEventsByUserId(CurrentUserId);
         }
     }
 }

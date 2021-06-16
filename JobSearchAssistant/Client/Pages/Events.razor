@@ -38,16 +38,16 @@
                     if (jobEvent.IsEditing)
                     {
                         <tr>
-                            <td>
+                            <td data-label="Company Name">
                                 <input type="text" class="form-control" placeholder="Company Name" @bind="jobEvent.CompanyName" />
                             </td>
-                            <td>
+                            <td data-label="Interviewer Name">
                                 <input type="text" class="form-control" placeholder="Status" @bind="jobEvent.InterviewerName" />
                             </td>
-                            <td>
+                            <td data-label="Other Info">
                                 <input type="text" class="form-control" placeholder="Position" @bind="jobEvent.OtherInfo" />
                             </td>
-                            <td>
+                            <td data-label="Date and Time">
                                 <input type="datetime-local" class="form-control" @bind:format="yyyy-MM-ddTHH:mm" @bind="jobEvent.DateTime" />
                             </td>
                             <td>
@@ -61,10 +61,10 @@
                     else
                     {
                         <tr>
-                            <td>@jobEvent.CompanyName</td>
-                            <td>@jobEvent.InterviewerName</td>
-                            <td>@jobEvent.OtherInfo</td>
-                            <td>@jobEvent.DateTime</td>
+                            <td data-label="Company Name">@jobEvent.CompanyName</td>
+                            <td data-label="Interviewer Name">@jobEvent.InterviewerName</td>
+                            <td data-label="Other Info">@jobEvent.OtherInfo</td>
+                            <td data-label="Date and Time">@jobEvent.DateTime.ToString("yyyy-MM-dd HH:mm")</td>
                             <td>
                                 <button type="button" class="oi oi-pencil" @onclick="() => EnableEditing(true, jobEvent)"></button>
                             </td>
@@ -104,7 +104,7 @@
         <div class="form-group">
             <label for="applied-date">Date Applied</label>
             <br />
-            <input id="applied-date" type="datetime-local" class="form-control" placeholder="Date Applied" @bind="newEvent.DateTime" />
+            <input id="applied-date" type="datetime-local" class="form-control" placeholder="Date Applied" @bind:format="yyyy-MM-ddTHH:mm" @bind="newEvent.DateTime" />
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </EditForm>
