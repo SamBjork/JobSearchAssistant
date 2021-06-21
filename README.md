@@ -13,3 +13,11 @@ Help you keep track of the status for all applications and to archive when not r
 The web app wll use a SQL server to write and read data.
 <br/> 
 The idea is to host the application online to enable for any user to create an account and start using the service.
+
+Specifications:
+<Br /> 
+- C#
+- Blazor Webassembly
+- Ubuntu 20.04 VM
+- Nginx
+- Zero SSL Certificate
