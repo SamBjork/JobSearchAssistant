@@ -1,6 +1,6 @@
 # JobSearchAssistant
 
-[www.jobsearchassistant.online](Url Link)
+[Link to webpage](www.jobsearchassistant.online)
 
 A blazor webassembly app that helps to contain all information about your jobsearching.
 <br/> 
