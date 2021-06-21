@@ -1,5 +1,7 @@
 # JobSearchAssistant
 
+URL: www.jobsearchassistant.online
+
 A blazor webassembly app that helps to contain all information about your jobsearching.
 <br/> 
 It will be able to handle information about job applications you've sent. 
