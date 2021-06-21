@@ -19,6 +19,5 @@ namespace JobSearchAssistant.Server.Data
         }
         public virtual DbSet<Job> Jobs { get; set; }
         public virtual DbSet<Event> Events { get; set; }
-
     }
 }

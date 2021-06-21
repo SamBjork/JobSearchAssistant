@@ -43,6 +43,7 @@ namespace JobSearchAssistant.Server
             services.AddAuthentication()
                 .AddIdentityServerJwt();
 
+            services.ConfigureNonBreakingSameSiteCookies();
             services.AddControllersWithViews();
             services.AddRazorPages();
 
@@ -75,6 +76,7 @@ namespace JobSearchAssistant.Server
 
             app.UseRouting();
 
+            app.UseCookiePolicy();
             app.UseIdentityServer();
             app.UseAuthentication();
             app.UseAuthorization();
