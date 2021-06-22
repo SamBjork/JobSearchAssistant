@@ -1,7 +1,9 @@
 ﻿@using Microsoft.AspNetCore.Hosting
 @using Microsoft.AspNetCore.Mvc.ViewEngines
+@using JobSearchAssistant.Server.Services 
 @inject IWebHostEnvironment Environment
 @inject ICompositeViewEngine Engine
+@inject CurrentYearService CurrentYear 
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,14 +46,16 @@
             @RenderBody()
         </main>
     </div>
-    <footer class="footer border-top text-muted">
+    <footer class="border-top text-muted newFooter">
         <div class="container">
-            &copy; 2021 - JobSearchAssistant - <a asp-area="" asp-page="Privacy">Privacy</a>
+            &copy; @CurrentYear.GetCurrentYear() - JobSearchAssistant
         </div>
     </footer>
     <script src="~/Identity/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/Identity/js/site.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+

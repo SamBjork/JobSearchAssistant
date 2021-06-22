@@ -50,6 +50,7 @@ namespace JobSearchAssistant.Server
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
 
             services.AddTransient<IEmailSender, MailService>();
+            services.AddTransient<CurrentYearService>();
 
             services.AddHttpContextAccessor();
         }
