@@ -21,3 +21,4 @@ Specifications:
 - Ubuntu 20.04 VM
 - Nginx
 - Zero SSL Certificate
+- GearHost MSSQL DB
